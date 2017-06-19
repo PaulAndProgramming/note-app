@@ -1,0 +1,229 @@
+custom_blue = #279AF1
+custom_red_1 = #F71735
+custom_red_2 = #ED1C24
+custom_gray_1 = #BFC0C0
+custom_gray_2 = #D3D0CB
+custom_gray_3 = #797979
+
+html, body
+  height: 100%
+  margin: 0
+  padding: 0
+body
+  font-family: sans-serif
+  font-size: 16px
+a
+  color: inherit
+  text-decoration: none
+  display: inline-block
+input, button
+  font-size: 16px
+
+#app
+  position: relative
+  height: 100%
+  >div
+    height: 100%
+
+.input
+  box-sizing: border-box
+  border: 1px solid custom_gray_1
+  width: 100%
+  height: 30px
+  display: block
+  border-radius: 5px
+  padding-left: 10px
+
+.button
+  background: custom_blue
+  color: white
+  display: block
+  height: 30px
+  width: 100%
+  font-size: 16px
+  border-radius: 5px
+  border: none
+  cursor: pointer
+  box-sizing: border-box
+  overflow: hidden
+
+.navigation
+  position: fixed
+  top: 0
+  left: 0
+  height: 35px
+  width: 100%
+  background: custom_blue
+  text-align: right
+  a
+    color: white
+    height: 100%
+    line-height: 35px
+    padding: 0 20px
+    cursor: pointer
+  .logout
+    display: block
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+  a:hover
+    background: rgba(255,255,255,0.2)
+
+.content
+  box-sizing: border-box
+  height: 100%
+  padding-top: 35px
+
+.search_notes
+  position: absolute
+  top: 10px
+  left: 0
+  width: 100%
+  display: block
+  height: 40px
+  padding: 5px
+  box-sizing: border-box
+
+.notes
+  width: 500px
+  max-width: 100%
+  margin: 0 auto
+  height: 100%
+  box-sizing: border-box
+  position: relative
+  overflow: hidden
+  padding: 50px 0 75px
+.notes.willdelete
+  padding-bottom: 40px
+
+.all_notes
+  max-height: 100%
+  overflow: auto
+  box-sizing: border-box
+
+.empty
+  color: custom_gray_1
+  font-size: 20px
+  font-weight: bold
+  text-align: center
+  padding: 10px
+
+.note
+  border: 1px solid custom_gray_2
+  border-radius: 5px
+  box-sizing: border-box
+  margin: 10px 5px
+  padding: 5px
+  padding-right: 34px
+  overflow: hidden
+  word-wrap: break-word
+  position: relative
+  >div:nth-of-type(2)
+    text-align: right
+    font-size: 12px
+    padding-top: 5px
+    color: custom_gray_3
+  >div:nth-of-type(3)
+    position: absolute
+    right: 0
+    width: 14px
+    height: 14px
+    top: 0
+    bottom: 0
+    margin: auto
+    border-radius: 50%
+    cursor: pointer
+    border: 10px solid white
+    background: custom_gray_2
+    >div
+      position: absolute
+      right: 0
+      left: 0
+      width: 12px
+      height: 12px
+      top: 0
+      bottom: 0
+      box-sizing: border-box
+      margin: auto
+      border-radius: 50%
+      background: white
+      border: 0px solid white
+      transition: all 0.1s ease-out
+  >div:nth-of-type(3).selected
+    >div
+      border: 3px solid white
+      background: custom_gray_2
+
+.add_new_note
+  display: block
+  width: 100%
+  padding: 5px
+  box-sizing: border-box
+  button
+    margin-top: 5px
+
+.delete_notes
+  overflow: hidden
+  padding: 5px
+  line-height: 30px
+  color: custom_gray_3
+  text-align: center
+  >div
+    cursor: pointer
+    padding: 0 5px
+    float: left
+    width: auto
+    overflow: hidden
+  >div:first-of-type
+    margin-right: 5px
+  >div:nth-of-type(3)
+    float: right
+    font-size: 0
+    > *
+      vertical-align: middle
+      font-size: 1rem
+    >div
+      display: inline-block
+      background: custom_red_2
+      font-size: 13px
+      color: white
+      padding: 0 5px
+      box-sizing: border-box
+      height: 26px
+      min-width: 26px
+      border: 4px solid white
+      border-radius: 24px
+      line-height: 19px
+      overflow: hidden
+
+.about
+  padding: 10px
+  box-sizing: border-box
+
+.login
+  display: block
+  margin: -80px auto 0
+  width: 240px
+  height: 145px
+  position: relative
+  top: 50%
+  >div:first-of-type
+    font-size: 20px
+    font-weight: bold
+    text-align: center
+    box-sizing: border-box
+    padding: 5px 0
+    height: 35px
+  >input
+    margin: 5px 0
+  >button
+    margin-top: 10px
+.login.warning
+  height: 165px
+  .invalidinput
+    height: 20px
+    line-height: 20px
+    text-align: center
+    font-size: 13px
+    color: custom_red_1
